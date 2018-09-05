@@ -50,6 +50,8 @@ var revealContent = $(this).find('p:first');
 
 // Slide show animation
 
+
+
 // Select left and right icon buttons
 var $leftBtn = $('.left');
 var $rightBtn = $('.right');
@@ -58,6 +60,8 @@ var $slides = $slideContainer.find('.slides');
 var width = 1519;
 var animationSpeed = 800;
 var currentSlide =1;
+
+
 
 $leftBtn.on('click',function(){
 	$slideContainer.animate({'margin-left': '+='+width},animationSpeed,function(){
