@@ -47,3 +47,37 @@ var revealContent = $(this).find('p:first');
 
 
 
+
+// Slide show animation
+
+// Select left and right icon buttons
+var $leftBtn = $('.left');
+var $rightBtn = $('.right');
+var $slideContainer = $('.slider');
+var $slides = $slideContainer.find('.slides');
+var width = 1519;
+var animationSpeed = 800;
+var currentSlide =1;
+
+$leftBtn.on('click',function(){
+	$slideContainer.animate({'margin-left': '+='+width},animationSpeed,function(){
+		
+	})
+
+})
+
+$rightBtn.on('click',function(){
+	currentSlide++;
+	if(currentSlide > $slides.length){
+		currentSlide=1;
+		$slideContainer.css({'margin-left': 0});
+	}
+	$slideContainer.animate({'margin-left': '-='+width},animationSpeed)
+})
+// Store in individual variables
+// On left click animate - 1519px on the left margin of the ul element
+// On right click vice versa
+// Also on right click test if we are on the first slide
+
+
+

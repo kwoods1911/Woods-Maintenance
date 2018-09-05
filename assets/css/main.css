@@ -1,6 +1,5 @@
 /*Mobile first design*/
 body{
-	/*background-color: red;*/
 	font-size: 8px;
 	margin:0;
 	font-family: Verdana,Geneva,sans-serif;
@@ -120,6 +119,7 @@ float: left;
 }
 
 .slides{
+position: relative;
 height:auto;
 width: 25%;
 }
@@ -165,10 +165,18 @@ width: 25%;
 	margin: 30px 10px;
 	color:#dbdbdb;
 }
-.left:hover{
+
+#scrollBtns .left{
+	display: block;
+}
+#scrollBtns .right{
+	display: block;
+}
+
+#scrollBtns .left:hover{
 	cursor: pointer;
 }	
-.right:hover{
+#scrollBtns .right:hover{
 	cursor: pointer;
 }
 
@@ -363,9 +371,11 @@ footer{
 
 .left:hover{
 	color:#fff;
+	cursor: pointer;
 }	
 .right:hover{
 	color:#fff;
+	cursor: pointer;
 }
 /*Display Showcase Buttons*/
 .showcase_btn{
@@ -374,14 +384,14 @@ footer{
 .showcase_btn i{
 	font-size: 40px;
 }	
-.slide .left{
+.left{
 	position: absolute;
 	z-index: 4;
 	display: block;
 	 top:50%;
     transform:translateY(-50%);
 }
-.slide .right{
+.right{
 	position: absolute;
 	z-index: 4;
 	display: block;
