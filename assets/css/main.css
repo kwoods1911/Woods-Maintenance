@@ -88,28 +88,47 @@ header{
 	transition: .6s;
 }
 .dsk-top-nav a{
-		font-size: 2em;
+		font-size:2em;
 	color:#fff;
 	text-decoration: none;
 }
 
 #mainSlider{
 	height:auto;
+	overflow:hidden;
 }
 .responsive{
 	height:auto;
-	max-height: 500px;
 	width: 100%;
+
 }
 .slide{
 	position: relative;
+	max-height: 500px;
 }
 
-.slide .left{
+.slider{
+	margin:0;
+	padding:0;
+	list-style: none;
+	width:400%;
+	overflow:hidden;
+}
+
+.slide .slides{
+float: left;
+}
+
+.slides{
+height:auto;
+width: 25%;
+}
+
+.left{
 	display: none;
 }
 
-.slide .right{
+.right{
 	display: none;
 }
 
@@ -400,6 +419,7 @@ footer{
 
 .container{
 	width: 80%;
+
 }
 .dsk-top-nav{
 	display: block;
