@@ -1,26 +1,15 @@
 // Hover over the box element and change the color
-
-
-
-// #00C7C8;
-
 // animate drop down content
-
 // select elements
 var dropDownBtn = $('.dropdown_btn');
 var dropDownContent = $('.dropdown_content');
-
 dropDownBtn.on('click',function(){
 	dropDownContent.slideToggle(500,'swing');
 })
-
 var testimonial = document.getElementsByClassName('testimonial');
-
-
 for(i=0; i<testimonial.length; i++){
 	testimonial[i].style.display ="none";
 };
-
 testimonial[0].style.display="block";
 
 
@@ -49,39 +38,86 @@ var revealContent = $(this).find('p:first');
 
 
 // Slide show animation
-
-
-
 // Select left and right icon buttons
 var $leftBtn = $('.left');
 var $rightBtn = $('.right');
 var $slideContainer = $('.slider');
 var $slides = $slideContainer.find('.slides');
-var width = 1519;
+var width = '100%';
+var width;
 var animationSpeed = 800;
-var currentSlide =1;
+var currentSlide =0;
+var totalSlides = 4;
+var clickTotal =0;
+var startImg;
+var startPos;
+
+$slides.filter(':first').addClass('start');
+// $slides.filter(':first').before($slides.clone());
+// $slides.filter(':first').before($slides.clone());
+// $slides.filter(':first').after($slides.clone());
+
+// Have the first image positioned in the middle of the browser
+startImg = $('.start').outerWidth();
+// startPos = 
 
 
 
+
+
+
+
+
+
+// Slider Buttons - on click margin animates
 $leftBtn.on('click',function(){
+	// currentSlide--;
+	// if(currentSlide=== -$slides.length){
+	// 	currentSlide=0;
+	// 	$slideContainer.css({'margin-left': 0});
+	// }
 	$slideContainer.animate({'margin-left': '+='+width},animationSpeed,function(){
-		
 	})
-
 })
-
 $rightBtn.on('click',function(){
-	currentSlide++;
-	if(currentSlide > $slides.length){
-		currentSlide=1;
-		$slideContainer.css({'margin-left': 0});
-	}
+	// currentSlide++;
+	// if(currentSlide === $slides.length){
+	// 	currentSlide=0;
+	// 	$slideContainer.css({'margin-left': 0});
+	// }
 	$slideContainer.animate({'margin-left': '-='+width},animationSpeed)
 })
 // Store in individual variables
-// On left click animate - 1519px on the left margin of the ul element
+// On left click animate - 100% on the left margin of the ul element
 // On right click vice versa
-// Also on right click test if we are on the first slide
+// Also on right click test if we are on the firts slide
+
+
+
+
+// // 1ST TRIAL-Log attempts in journey let it be a learning lesson
+// // On window resize we get the current value of the window width.
+// // Use the current size of the window width to 
+// var browser = $(window);
+// 	browser.on('resize',function(){
+// 	var $this =$(this).width();
+// 	var width = $this;
+// 	console.log(updatedWidth);
+// 	return width;
+// });
+// // SECOND TRIALS
+// // SELECT THE IMAGE WIDTH FROM THE IMAGE TAG
+// // SET VALUE FROM IMAGE TAG TO WIDTH VARIABLE
+
+// var imageWidth = $('.slides img');
+// console.log(imageWidth)
+
+
+
+
+
+
+
 
 
 
