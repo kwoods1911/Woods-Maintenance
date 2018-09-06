@@ -11,10 +11,6 @@ for(i=0; i<testimonial.length; i++){
 	testimonial[i].style.display ="none";
 };
 testimonial[0].style.display="block";
-
-
-
-
 // On hovering image element remove opacity
 var reveal = $('.description');
 reveal.on('mouseover',function(){
@@ -37,56 +33,132 @@ var revealContent = $(this).find('p:first');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Slide show animation
 // Select left and right icon buttons
 var $leftBtn = $('.left');
 var $rightBtn = $('.right');
 var $slideContainer = $('.slider');
 var $slides = $slideContainer.find('.slides');
-var width = '100%';
-var width;
+var width = '100vw';
 var animationSpeed = 800;
 var currentSlide =0;
 var totalSlides = 4;
-var clickTotal =0;
+// var clickTotal =0;
 var startImg;
-var startPos;
+var startPos = '-400vw';
 
+// Starting point of first image
+// First image positioned in the middle of the browser
 $slides.filter(':first').addClass('start');
-// $slides.filter(':first').before($slides.clone());
-// $slides.filter(':first').before($slides.clone());
-// $slides.filter(':first').after($slides.clone());
 
-// Have the first image positioned in the middle of the browser
 startImg = $('.start').outerWidth();
-// startPos = 
+$slideContainer.css('margin-left', startPos);
 
-
-
-
-
-
+$slides.filter(':first').before($slides.clone());
+$slides.filter(':first').before($slides.clone());
+$slides.filter(':last').after($slides.clone());
 
 
 
 // Slider Buttons - on click margin animates
 $leftBtn.on('click',function(){
-	// currentSlide--;
-	// if(currentSlide=== -$slides.length){
-	// 	currentSlide=0;
-	// 	$slideContainer.css({'margin-left': 0});
-	// }
 	$slideContainer.animate({'margin-left': '+='+width},animationSpeed,function(){
+	currentSlide--;
+	if(currentSlide=== -$slides.length){
+		currentSlide=0;
+		$slideContainer.css({'margin-left': startPos});
+	}
 	})
 })
 $rightBtn.on('click',function(){
-	// currentSlide++;
-	// if(currentSlide === $slides.length){
-	// 	currentSlide=0;
-	// 	$slideContainer.css({'margin-left': 0});
-	// }
-	$slideContainer.animate({'margin-left': '-='+width},animationSpeed)
+	$slideContainer.animate({'margin-left': '-='+width},animationSpeed, function(){
+	currentSlide++;
+	if(currentSlide === $slides.length){
+		currentSlide=0;
+		$slideContainer.css({'margin-left': startPos});
+	}
+	})
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Store in individual variables
 // On left click animate - 100% on the left margin of the ul element
 // On right click vice versa

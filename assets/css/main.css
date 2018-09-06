@@ -110,7 +110,7 @@ header{
 	margin:0;
 	padding:0;
 	list-style: none;
-	width:400%;
+	width:1600vw;
 	overflow:hidden;
 }
 
@@ -121,7 +121,8 @@ float: left;
 .slides{
 position: relative;
 height:auto;
-width: 25%;
+/*width: 25%;*/
+width: 100vw;
 }
 
 .left{
