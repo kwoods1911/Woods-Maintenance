@@ -57,17 +57,10 @@ var animationSpeed = 800;
 var currentSlide =0;
 var totalSlides = 4;
 var startPos = '-400vw';
-var $dots = $('.dots');
 
 
 
-$dots.on('click',function(){
-	for(i=0; i<$dots.length; i++){
-	$dots.removeClass('active');
-}
-$(this).addClass('active');
-$slideContainer.animate({'margin-left': '-='+startPos},animationSpeed)
-})
+
 
 
 
@@ -104,13 +97,102 @@ $rightBtn.on('click',function(){
 
 
 
+// Fade in services section on page load
+// Each section is selected 
+var $paint = $('.painting .box');
+var $pressureWashing = $('.pressure_washing .box');
+var $landScaping =$('.landscaping .box');
+var $window = $(window);
+var endZone1 = ($paint.offset().top - ($paint.height()))/2;    
+var endZone2 = ($pressureWashing.offset().top - $pressureWashing.height())/2;   //
+var endZone3 = ($landScaping.offset().top - $landScaping.height())/2;
+console.log(endZone1);
+console.log(endZone2);
+console.log(endZone3);
+
+
+// Run animation if laptop or desktop
+if($window.width()>1024){
+$paint.css({'opacity':'0'});
+$pressureWashing.css({'opacity':'0'});
+$landScaping.css({'opacity':'0'});
+
+
+// Animation will only play when page has scrolled.
+$window.on('scroll',function(){
+console.log($window.scrollTop());
+	if((endZone1)<$window.scrollTop() ){  //Conditional statement test how far the user has scrolled
+		$paint.animate({'opacity':'1'},5000); //If user has scrolled pass half of the sections height the animation will play
+	}else{
+		$paint.css({'opacity':'0'});   //If the user hasnt reached the point yet the section will remain invisible.
+		
+	}
+	// Same concept above applies here.
+	if((endZone2)<$window.scrollTop() ){
+		$pressureWashing.animate({'opacity':'1'},7000);
+	}else{
+		$pressureWashing.css({'opacity':'0'});
+	}
+	// Same concept above applies here.
+	if((endZone3)<$window.scrollTop() ){
+		$landScaping.animate({'opacity':'1'},7000);
+	}else{
+		$landScaping.css({'opacity':'0'});
+	}
+	
+})
+	
+}
+
+
+
+
+
+// Testimonial Slideshow
+var slideIndex =1;
+showImage(slideIndex);
+function plusIndex(n){
+	slideIndex = slideIndex + n;
+	showImage(slideIndex);
+}
+function currentSlide(n){
+	showImage(slideIndex = n);
+}
+function showImage(n){
+	var slide = document.getElementsByClassName("testimonial");
+
+	if(n> slide.length){
+		slideIndex=1
+	}
+	if(n<1){
+		slideIndex = slide.length
+	}
+
+	for(var i= 0; i<slide.length; i++){
+		slide[i].style.display = "none";
+	};
+	slide[slideIndex-1].style.display = "block";
+}
+autoSlide();
+function autoSlide(){
+
+	var slide = document.getElementsByClassName("testimonial");
+
+	for(var i= 0; i<slide.length; i++){
+		slide[i].style.display = "none";
+	};
+
+	if(slideIndex> slide.length){slideIndex=1};
+	slide[slideIndex-1].style.display = "block";
+	slideIndex++;
+	setTimeout(autoSlide,4000)
+}
 
 
 
 
 
 
-//TESTIMONIAL SLIDER
 
 
 
@@ -119,44 +201,6 @@ $rightBtn.on('click',function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Store in individual variables
-// On left click animate - 100% on the left margin of the ul element
-// On right click vice versa
-// Also on right click test if we are on the firts slide
-
-// // 1ST TRIAL-Log attempts in journey let it be a learning lesson
-// // On window resize we get the current value of the window width.
-// // Use the current size of the window width to 
-// var browser = $(window);
-// 	browser.on('resize',function(){
-// 	var $this =$(this).width();
-// 	var width = $this;
-// 	console.log(updatedWidth);
-// 	return width;
-// });
-// // SECOND TRIALS
-// // SELECT THE IMAGE WIDTH FROM THE IMAGE TAG
-// // SET VALUE FROM IMAGE TAG TO WIDTH VARIABLE
-
-// var imageWidth = $('.slides img');
-// console.log(imageWidth)
 
 
 

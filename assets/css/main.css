@@ -391,31 +391,6 @@ background-color:#dbdbdb;
 }
 
 
-.testimonial_slider{
-	height: auto;
-	width:500vw;
-	padding:0 10px;
-	list-style: none;
-		
-}
-
-.testimonial_slider .testimonial_slide{
-	float: left;
-}
-
-
-
-.slide_viewer{
-	padding: 0 20px;
-	height: 400px;
-	width: 100%;
-	max-width: 334px;
-	overflow: hidden;
-	margin:0 auto;
-}
-
-
-
 footer{
 	text-align: center;
 	background-color: #253746;
@@ -445,18 +420,66 @@ footer{
 	color: red;
 }*/
 
-
+/*Tablet*/
 @media(min-width: 768px){
 	.painting,.pressure_washing,.landscaping{
 		display: grid;
 		grid-template-columns: repeat(2,1fr);
 		grid-column-gap: 16px;
 	}
+
+/*Testimonial Section*/
+
+#testimonialSlideContainer{
+	width:400px;
+	position: relative;
+	margin:0 auto;
+}
+
+.testimonial{
+	display: none;
+}
+
+.prev,.next{
+			position: absolute;
+			top:50%;
+			color:#fff;
+			font-weight:bold;
+			padding: 10px;
+			border-radius: 0 3px 3px 0;
+		}
+		.next{
+			border-radius:3px 0 0 3px;
+			right:0;
+		}
+
+
+		.prev:hover,.next:hover{
+			background:rgba(0,0,0,0.8);
+			cursor:pointer;
+		}
+		.prev{
+			left:0;
+		}
+
+
+		.fade{
+			animation-name:fade;
+			animation-duration: 0.5s;
+		}
+
+		@keyframes fade {
+			from{opacity:0.4;}
+			to{opacity: 1;}
+		}
+
+
+
 	
 }
 
 
-
+/*Small Laptop*/
 @media(min-width: 1024px){
 
 .left:hover{
@@ -533,6 +556,12 @@ grid-column-gap: 8px;
 /*.testimonial{
 display: grid;
 grid-template-columns: repeat(2,1fr);
+}
+
+
+.testimonial_container{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
 }*/
 
 
