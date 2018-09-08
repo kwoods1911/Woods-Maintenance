@@ -390,6 +390,51 @@ background-color:#dbdbdb;
 	border:1.5px solid #253746;
 }
 
+#testimonialSlideContainer{
+	position: relative;
+	margin:0 auto;
+	width:90%;
+	max-width:350px;
+}
+
+
+.prev,.next{
+			position: absolute;
+			top:50%;
+			color:#333;
+			font-weight:bold;
+			padding: 10px;
+			border-radius: 0 3px 3px 0;
+			font-size: 20px;
+		}
+		.next{
+			border-radius:3px 0 0 3px;
+			right:-10px;
+		}
+
+
+		.prev:hover,.next:hover{
+			background:rgba(0,0,0,0.8);
+			color:#fff;
+			cursor:pointer;
+		}
+		.prev{
+			left:-10px;
+		}
+
+
+.fade{
+			animation-name:fade;
+			animation-duration: 0.5s;
+		}
+
+		@keyframes fade {
+			from{opacity:0.4;}
+			to{opacity: 1;}
+		}
+
+
+
 
 footer{
 	text-align: center;
@@ -440,7 +485,7 @@ footer{
 	display: none;
 }
 
-.prev,.next{
+/*.prev,.next{
 			position: absolute;
 			top:50%;
 			color:#fff;
@@ -472,7 +517,7 @@ footer{
 			from{opacity:0.4;}
 			to{opacity: 1;}
 		}
-
+*/
 
 
 	
