@@ -1,4 +1,3 @@
-// Hover over the box element and change the color
 // animate drop down content
 // select elements
 var dropDownBtn = $('.dropdown_btn');
@@ -6,11 +5,17 @@ var dropDownContent = $('.dropdown_content');
 dropDownBtn.on('click',function(){
 	dropDownContent.slideToggle(500,'swing');
 })
-var testimonial = document.getElementsByClassName('testimonial');
-for(i=0; i<testimonial.length; i++){
-	testimonial[i].style.display ="none";
-};
-testimonial[0].style.display="block";
+
+
+
+
+
+
+
+
+
+
+
 // On hovering image element remove opacity
 var reveal = $('.description');
 reveal.on('mouseover',function(){
@@ -41,47 +46,7 @@ var revealContent = $(this).find('p:first');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Slide show animation
+// SHOWCASE SLIDER
 // Select left and right icon buttons
 var $leftBtn = $('.left');
 var $rightBtn = $('.right');
@@ -91,17 +56,26 @@ var width = '100vw';
 var animationSpeed = 800;
 var currentSlide =0;
 var totalSlides = 4;
-// var clickTotal =0;
-var startImg;
 var startPos = '-400vw';
+var $dots = $('.dots');
+
+
+
+$dots.on('click',function(){
+	for(i=0; i<$dots.length; i++){
+	$dots.removeClass('active');
+}
+$(this).addClass('active');
+$slideContainer.animate({'margin-left': '-='+startPos},animationSpeed)
+})
+
+
 
 // Starting point of first image
 // First image positioned in the middle of the browser
 $slides.filter(':first').addClass('start');
-
 startImg = $('.start').outerWidth();
 $slideContainer.css('margin-left', startPos);
-
 $slides.filter(':first').before($slides.clone());
 $slides.filter(':first').before($slides.clone());
 $slides.filter(':last').after($slides.clone());
@@ -136,6 +110,9 @@ $rightBtn.on('click',function(){
 
 
 
+//TESTIMONIAL SLIDER
+
+
 
 
 
@@ -163,9 +140,6 @@ $rightBtn.on('click',function(){
 // On left click animate - 100% on the left margin of the ul element
 // On right click vice versa
 // Also on right click test if we are on the firts slide
-
-
-
 
 // // 1ST TRIAL-Log attempts in journey let it be a learning lesson
 // // On window resize we get the current value of the window width.

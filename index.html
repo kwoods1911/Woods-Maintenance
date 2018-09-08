@@ -44,15 +44,16 @@
 
 
 	<section id="mainSlider">
-		<div class="left showcase_btn">
-				<i class="fas fa-arrow-circle-left"></i>
-		</div>
+		
 
 
 
 
 
 <div class="slide">
+	<div id="leftShowcaseBtn" class="left showcase_btn">
+				<i class="fas fa-arrow-circle-left"></i>
+		</div>
 	
 
 		<ul class="slider">
@@ -82,37 +83,38 @@
 			<li class="slides">
 				<img src="assets/css/images/showcase_4.jpeg" class="responsive">
 				<div class="text">
-				<h1>Old Home new looks</h1>
+				<h1>Old Home New Look</h1>
 				</div>
 			</li>
 		</ul>
+
+		<div id="rightShowcaseBtn" class="right showcase_btn">
+			<i class="fas fa-arrow-circle-right"></i>
+		</div>
 	
 	
 </div>	
-		<div class="right showcase_btn">
-			<i class="fas fa-arrow-circle-right"></i>
-		</div>
+		
 
 
-<!-- Add Remaining Slides -->
 		
 	</section>
 
-	<div id="scrollBtns">
+	<!-- <div id="scrollBtns">
 		<div class="left">
 				<i class="fas fa-arrow-circle-left"></i>
 		</div>
 
 		<div class="selectSlide">
-			<span class="dots"></span>
-			<span class="dots"></span>
-			<span class="dots"></span>
-			<span class="dots"></span>
+			<span class="dots inactive"></span>
+			<span class="dots inactive"></span>
+			<span class="dots inactive"></span>
+			<span class="dots inactive"></span>
 		</div>
-		<div class="right">
+		<div  class="right">
 			<i class="fas fa-arrow-circle-right"></i>
 		</div>
-	</div>
+	</div> -->
 
 	<section id="services">
 
@@ -250,87 +252,139 @@
 		<div class="section_header">
 				<h1>Testimonials</h1>
 			</div>
-		<div class="container">
+		<div class="testimonial_container">
 			<!-- Slide show -->
-		<div class="box testimonial">
-			<div class="image_contain">
-				<img src="assets/css/images/client_1.jpeg" class="image">
-			</div>
-			<div class="client_comments">
-				<h2>Testimonial</h2>
-			<p>D. Ferguson</p>
-			<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
-			</div>
-			
-		</div>
-
-
-		<div class="box testimonial">
-			<div class="image_contain">
-				<img src="assets/css/images/client_2.jpeg" class="image">
-			</div>
-			<div class="client_comments">
-				<h2>Testimonial</h2>
-			<p>D. Ferguson</p>
-			<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
-			</div>
-			
-		</div>
-
-
-		<div class="box testimonial">
-			<div class="image_contain">
-				<img src="assets/css/images/client_3.jpeg" class="image">
-			</div>
-			<div class="client_comments">
-				<h2>Testimonial</h2>
-			<p>D. Ferguson</p>
-			<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
-			</div>
-			
-		</div>
-
-
-		<div class="box testimonial">
-			<div class="image_contain">
-				<img src="assets/css/images/client_4.jpeg" class="image">
-			</div>
-			<div class="client_comments">
-				<h2>Testimonial</h2>
-			<p>D. Ferguson</p>
-			<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
-			</div>
-			
-		</div>
 
 
 
-		<div class="box testimonial">
-			<div class="image_contain">
-				<img src="assets/css/images/client_5.jpeg" class="image">
-			</div>
-			<div class="client_comments">
-				<h2>Testimonial</h2>
-			<p>S. Marshall</p>
-			<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
-			</div>
-			
-		</div>
+
+
+<div class="slide_viewer">
+
+	<ul class="testimonial_slider">
+
+
+<li class="testimonial_slide">
+	<div class="box testimonial">
+	<div class="image_contain">
+	<img src="assets/css/images/client_2.jpeg" class="responsive">
+	</div>
+	<div class="client_comments">
+	<h2>Testimonial</h2>
+	<p>D. Ferguson</p>
+	<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
+	</div>
+	</div>
+
+</li>
+
+				
+
+					<li class="testimonial_slide">
+
+
+							<div class="box testimonial">
+							<div class="image_contain">
+							<img src="assets/css/images/client_2.jpeg" class="image">
+							</div>
+							<div class="client_comments">
+							<h2>Testimonial</h2>
+							<p>D. Ferguson</p>
+							<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
+							</div>
+
+							</div>
+
+
+					</li>
+				
+
+
+						<li class="testimonial_slide">
+
+								<div class="box testimonial">
+								<div class="image_contain">
+								<img src="assets/css/images/client_3.jpeg" class="image">
+								</div>
+								<div class="client_comments">
+								<h2>Testimonial</h2>
+								<p>D. Ferguson</p>
+								<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
+								</div>
+								</div>
+
+
+						</li>
+				
+
+
+					<li class="testimonial_slide">
+
+							<div class="box testimonial">
+							<div class="image_contain">
+							<img src="assets/css/images/client_4.jpeg" class="image">
+							</div>
+							<div class="client_comments">
+							<h2>Testimonial</h2>
+							<p>D. Ferguson</p>
+							<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
+							</div>
+
+							</div>
+
+
+					</li>
+				
+
+
+			<li class="testimonial_slide">
+					<div class="box testimonial">
+					<div class="image_contain">
+					<img src="assets/css/images/client_5.jpeg" class="image">
+					</div>
+					<div class="client_comments">
+					<h2>Testimonial</h2>
+					<p>S. Marshall</p>
+					<p>Woods Maintenance gave my 30 year old house a clean looks.</p>
+					</div>
+					</div>
+
+			</li>
+				
+
+
+
+				</ul>
+	
+
+
+</div>
+
+
+
+
+	
+
+
+
+
+
+		
 
 <div class="testimonialSlideBtn">
 
 	<div id="scrollBtns">
-		<div class="left">
+		<div class="bottom_left">
 				<i class="fas fa-arrow-circle-left"></i>
 		</div>
 
-		<div class="selectSlide">
-			<span class="dots"></span>
-			<span class="dots"></span>
-			<span class="dots"></span>
-			<span class="dots"></span>
-		</div>
-		<div class="right">
+		<!-- <div class="selectSlide">
+			<span class="dotsBottom"></span>
+			<span class="dotsBottom"></span>
+			<span class="dotsBottom"></span>
+			<span class="dotsBottom"></span>
+		</div> -->
+		<div class=" bottom_right">
 			<i class="fas fa-arrow-circle-right"></i>
 		</div>
 	</div>
