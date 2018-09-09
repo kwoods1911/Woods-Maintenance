@@ -613,18 +613,135 @@ grid-column-gap: 8px;
 
 
 
+/*CONTACT.HTML*/
+
+
+#contact-showcase{
+	position: relative;
+	padding: 0;
+    margin: 0;
+    position: relative;
+    background-image: url(images/contact-page-showcase.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 350px;
+    background-attachment: scroll;
+}
+
+.contact-showcase-text{
+	position: absolute;
+	top:50%;
+	right:0;
+	left:0;
+	margin:auto;
+	text-align: center;
+	color:#fff;
+	font-size:40px;
+}
+
+#contact-information{
+	height:auto;
+	width: 100%;
+	font-family: "Gotham A","Gotham B",sans-serif;
+}
+
+#map{
+	height: 400px;
+	width: 100%;
+	background-color: #333;
+	color:#fff;
+}
+
+
+
+#contact-information h1{
+	font-size: 24px;
+}
+
+#contact-information p{
+	font-size:16px;
+	color:#676767;
+}
+
+.notice{
+	font-weight:800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 /*ABOUT.HTML*/
-
-
-
-
 /*Abt-Showcase*/
-
 .abt-main{
 	font-family: "Gotham A","Gotham B",sans-serif;
 }
