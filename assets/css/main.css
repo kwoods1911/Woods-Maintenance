@@ -433,7 +433,16 @@ background-color:#dbdbdb;
 			to{opacity: 1;}
 		}
 
-
+.pimg{
+	position: relative;
+	opacity:0.7;
+	background-image:url('images/parralax.jpeg');
+	background-position: center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	min-height: 600px;
+	background-attachment: fixed;
+}
 
 
 footer{
@@ -598,18 +607,136 @@ grid-template-columns: repeat(4,1fr);
 grid-column-gap: 8px;
 }
 
-/*.testimonial{
-display: grid;
-grid-template-columns: repeat(2,1fr);
-}
-
-
-.testimonial_container{
-	display: grid;
-	grid-template-columns: repeat(4,1fr);
-}*/
-
 
 
 }
 
+
+
+
+
+
+
+
+/*ABOUT.HTML*/
+
+
+
+
+/*Abt-Showcase*/
+
+.abt-main{
+	font-family: "Gotham A","Gotham B",sans-serif;
+}
+
+
+.abt-showcase{
+	padding: 0;
+	margin:0;
+	position: relative;
+	background-image:url('images/abt-showcase.jpeg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position:center;
+	min-height: 300px;
+background-attachment: scroll;
+}
+.abt-showcase-text h2{
+	position: absolute;
+	padding: 0;
+	top:50%;
+	left:0;
+	right:0;
+	margin:auto;
+	text-align: center;
+	font-size: 28px;
+	color:#fff;
+}
+
+.abt-container{
+	margin:0 auto;
+	width: 80%;
+}
+
+.whyus{
+	border-top:1px solid #dbdbdb;
+	padding:32px 0;
+}
+
+.whyus h3{
+	font-size: 18px;
+	margin:0;
+	padding: 16px 10px;
+	color:#676767;
+}
+
+.whyus h1{
+	font-size: 32px;
+	margin:0;
+}
+
+.whyus ul{
+	padding: 16px 8px;
+	color:#676767;
+}
+
+.whyus li{
+	padding: 8px 10px;
+	font-size: 16px;
+}
+
+
+.abt-info{
+	border-top:1px solid #dbdbdb;;
+	padding:32px 0;
+}
+
+
+.abt-info h1{
+	font-size: 32px;
+}
+
+
+.abt-info p{
+	color:#676767;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+.pimg2{
+	position: relative;
+	opacity:0.7;
+	background-image:url('images/parralax2.jpeg');
+	background-position: center;
+	background-size: cover;
+	background-repeat:no-repeat;
+	height: 400px;
+	background-attachment: fixed;
+}
+
+
+
+@media(min-width:768px){
+	.abt-container{
+		width: 50%;
+	}
+
+	.abt-info{
+		display: inline-block;
+		/*float: left;*/
+	}
+
+	.whyus ul{
+		margin-left: 64px;
+	}
+
+	.whyus li{
+		padding: 16px;
+	}
+}

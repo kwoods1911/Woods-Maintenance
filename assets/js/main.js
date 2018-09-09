@@ -120,7 +120,6 @@ $landScaping.css({'opacity':'0'});
 
 // Animation will only play when page has scrolled.
 $window.on('scroll',function(){
-console.log($window.scrollTop());
 	if((endZone1)<$window.scrollTop() ){  //Conditional statement test how far the user has scrolled
 		$paint.animate({'opacity':'1'},5000); //If user has scrolled pass half of the sections height the animation will play
 	}else{
