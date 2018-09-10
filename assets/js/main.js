@@ -184,7 +184,7 @@ function autoSlide(){
 	if(slideIndex> slide.length){slideIndex=1};
 	slide[slideIndex-1].style.display = "block";
 	slideIndex++;
-	setTimeout(autoSlide,4000)
+	setTimeout(autoSlide,8000)
 }
 
 

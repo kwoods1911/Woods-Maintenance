@@ -101,6 +101,14 @@ header{
 	width: 100%;
 
 }
+
+.overlay{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(48,45,45,.2);
+}
+
 .slide{
 	position: relative;
 	max-height: 500px;
@@ -397,6 +405,17 @@ background-color:#dbdbdb;
 	max-width:350px;
 }
 
+.client_comments h2{
+	font-size: 20px;
+}
+
+
+
+.client_comments p{
+	font-size: 16px;
+}
+
+
 
 .prev,.next{
 			position: absolute;
@@ -440,7 +459,7 @@ background-color:#dbdbdb;
 	background-position: center;
 	background-size: cover;
 	background-repeat:no-repeat;
-	min-height: 600px;
+	min-height: 400px;
 	background-attachment: fixed;
 }
 
@@ -450,6 +469,7 @@ footer{
 	background-color: #253746;
 	color:#98a0a8;
 	padding: 30px 20px;
+	font-size: 8px;
 }
 
 .logo_footer h1{
@@ -470,9 +490,18 @@ footer{
 	color:#fff;
 }
 
-/*.showcase_btn:hover{
-	color: red;
-}*/
+.company_description{
+	font-size: 16px;
+}
+
+.contact{
+	font-size: 12px;
+}
+
+#copywright{
+	font-size: 10px;
+}
+
 
 /*Tablet*/
 @media(min-width: 768px){
