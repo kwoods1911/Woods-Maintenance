@@ -121,20 +121,20 @@ $landScaping.css({'opacity':'0'});
 // Animation will only play when page has scrolled.
 $window.on('scroll',function(){
 	if((endZone1)<$window.scrollTop() ){  //Conditional statement test how far the user has scrolled
-		$paint.animate({'opacity':'1'},5000); //If user has scrolled pass half of the sections height the animation will play
+		$paint.animate({'opacity':'1'},3000); //If user has scrolled pass half of the sections height the animation will play
 	}else{
 		$paint.css({'opacity':'0'});   //If the user hasnt reached the point yet the section will remain invisible.
 		
 	}
 	// Same concept above applies here.
 	if((endZone2)<$window.scrollTop() ){
-		$pressureWashing.animate({'opacity':'1'},7000);
+		$pressureWashing.animate({'opacity':'1'},4000);
 	}else{
 		$pressureWashing.css({'opacity':'0'});
 	}
 	// Same concept above applies here.
 	if((endZone3)<$window.scrollTop() ){
-		$landScaping.animate({'opacity':'1'},7000);
+		$landScaping.animate({'opacity':'1'},5000);
 	}else{
 		$landScaping.css({'opacity':'0'});
 	}
@@ -184,7 +184,7 @@ function autoSlide(){
 	if(slideIndex> slide.length){slideIndex=1};
 	slide[slideIndex-1].style.display = "block";
 	slideIndex++;
-	setTimeout(autoSlide,8000)
+	setTimeout(autoSlide,6000)
 }
 
 
