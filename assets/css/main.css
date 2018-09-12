@@ -55,6 +55,13 @@ header{
 .dropdown_content li{
 	padding:8px 8px;
 	border-bottom: 1px solid #fff;
+	text-align: center;
+	margin:0;
+}
+
+.dropdown_content li:hover{
+	background-color: #003a62;
+	transition: .6s;
 }
 
 .dropdown_content a{
@@ -295,7 +302,7 @@ background-color:#dbdbdb;
 	position: relative;
 	margin:15px auto;
 	text-align: center;
-	border:1px solid #919191;
+	border:1.2px solid #0077c8;
 	height:auto;
 	width: 100%;
 	max-width: 320px;
@@ -367,9 +374,12 @@ background-color:#dbdbdb;
 
 .title{
 	font-size: 1em;
+	color:#0077c8;
 }
 .service_summary{
 	color:#676767;
+	/*color:#0077c8;*/
+
 }
 
 .slider_container{
