@@ -18,7 +18,8 @@ header{
 	position: relative;
 	height:auto;
 	min-height:40px;
-	background-color: #fff;
+	/*background-color: #fff;*/
+	background-color: #cf2e2e;
 	border-bottom: 2px solid #333;
 }
 
@@ -39,7 +40,8 @@ header{
 
 
 #logo a{
-	color:#dba622;
+	/*color:#dba622;*/
+	color:#fff;
 	text-decoration: none;
 	padding:4px 10px;
 
@@ -250,11 +252,12 @@ width: 100vw;
 	color:#fff;
 	overflow: hidden;
 	height: auto;
-	min-height: 500px;
+	min-height: 600px;
 
 }
 #testimonials .section_header{
 	color:#fff;
+	padding: 0
 }
 
 .testimonial{
@@ -392,6 +395,8 @@ text-decoration: none;
 
 
 
+
+
 /*Testimonial Section*/
 #testimonialSlideContainer{
 	width:400px;
@@ -410,6 +415,15 @@ text-decoration: none;
 /*Small Laptop*/
 @media(min-width: 1024px){
 
+	header{
+	background-color: #fff;
+}
+
+#logo a{
+	color:#dba622;
+}
+
+
 .left:hover{
 	color:#fff;
 	cursor: pointer;
@@ -421,9 +435,10 @@ text-decoration: none;
 /*Display Showcase Buttons*/
 .showcase_btn{
 	color:#dbdbdb;
+	font-size: 16px;
 }
 .showcase_btn i{
-	font-size: 40px;
+	font-size: 12px;
 }	
 .left{
 	position: absolute;
@@ -501,6 +516,12 @@ grid-column-gap: 8px;
 	font-size:16px
 }
 
+#down:hover{
+	cursor: pointer;
+}
+
+
+
 .service{
 	padding: 32px 0;
 }
@@ -531,31 +552,31 @@ grid-column-gap: 8px;
 	top:50%;
 	left:2%;
 	z-index: 4;
-	color:#dbdbdb;
+	color:#fff;
 }
 
 .left i{
-	font-size: 24px;
+	font-size: 40px;
 }
 .right{
 	position: absolute;
 	top:50%;
 	right:2%;
 	z-index: 4;
-	color:#dbdbdb;
+	color:#fff;
 }
 
 .right i{
-	font-size: 24px;
+	font-size: 40px;
 }
 
 
 .left:hover{
-	color:#fff;
+	color:#dba622;
 	cursor: pointer;
 }	
 .right:hover{
-	color:#fff;
+	color:#dba622;
 	cursor: pointer;
 }
 
@@ -625,6 +646,7 @@ background-color:#dbdbdb;
 	font-size: 24px;
 	text-align: center;
 	color:#333;
+	padding: 100px 0
 }
 
 .section_header h1{
@@ -678,7 +700,7 @@ background-color:#dbdbdb;
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(127,127,127,0.5);
+	/*background-color: rgba(127,127,127,0.5);*/
 	color:#fff;
 	top: 50%;
     transform: translateY(-50%);

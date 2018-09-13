@@ -48,20 +48,37 @@ $window.on('scroll',function(){
 
 
 // On hovering image element remove opacity
-var reveal = $('.description');
-reveal.on('mouseover',function(){
-	var revealContent = $(this).find('p:first');
-	revealContent.css({
-		transition:1,
-		opacity:1
-	});
-	$(this).addClass('reveal');
+// var reveal = $('.description');
+// reveal.on('mouseover',function(){
+// 	var revealContent = $(this).find('p:first');
+// 	revealContent.css({
+// 		transition:1,
+// 		opacity:1
+// 	});
+// 	$(this).addClass('reveal');
+// })
+// reveal.on('mouseout',function(){	
+// var revealContent = $(this).find('p:first');
+// 	revealContent.css({
+// 		transition:1,
+// 		opacity:0
+// 	})
+// 	$(this).removeClass('reveal');
+// });
+
+
+
+
+// On button click scroll down
+
+var $downbtn = $('#down');
+var $body = $('html,body');
+var $scrollPosition = $('#scrollPoint');
+
+$downbtn.on('click',function(){
+	$body.animate({scrollTop: $(this).offset().top},'slow');
 })
-reveal.on('mouseout',function(){	
-var revealContent = $(this).find('p:first');
-	revealContent.css({
-		transition:1,
-		opacity:0
-	})
-	$(this).removeClass('reveal');
-});
+
+
+
+// $downbtn.css({backgroundColor: 'red'});
